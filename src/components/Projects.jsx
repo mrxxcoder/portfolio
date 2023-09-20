@@ -41,7 +41,7 @@ function Projects() {
               <ProBox
                 title="Natours"
                 img={natours}
-                description="A car rental website is an online platform that allows users to rent cars for personal or business use. The website provides an interface for searching, comparing, and reserving cars."
+                description="Natours is a landing page for a fictional company that offers travels and tours all around the world."
                 techno1="HTML"
                 techno2="SASS"
                 code="https://github.com/stefvndev/car-rental"
@@ -53,7 +53,7 @@ function Projects() {
               <ProBox
                 title="usepopcorn"
                 img={usepopcorn}
-                description="A gym website is a comprehensive resource for fitness information, class schedules, membership options, and tools to help users achieve their fitness goals."
+                description="Usepopcorn is a rating website for movies and TV shows where you can search for your favorite movie, rate it and add it to your watched list."
                 techno1="React"
                 techno2="CSS"
                 code="https://github.com/mrxxcoder/usepopcorn"
@@ -65,7 +65,7 @@ function Projects() {
               <ProBox
                 title="Forkify"
                 img={forkify}
-                description="With a focus on simplicity and clean design, this store prioritize user experience, making it easy for customers to find and purchase the products they need."
+                description="Forkify is a food recipe application where you can search for your favorite meal and see it's ingredients, how much time it takes to be done, and you can also add your own recipes."
                 techno1="Javascript"
                 techno2="CSS"
                 code="https://github.com/stefvndev/Minimalist-E-commerce"
