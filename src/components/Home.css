@@ -1,0 +1,346 @@
+.hero {
+  background-color: #f6f8fc;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+    padding: 20rem 0;
+  }
+}
+.content {
+  align-items: center;
+  display: flex;
+  gap: 10rem;
+  height: 75rem;
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.hero-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25rem;
+}
+
+@media (max-width: 1200px) {
+  .hero-main {
+    gap: 10rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-main {
+    flex-direction: column-reverse;
+    gap: 15rem;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  margin-top: 5rem;
+}
+
+.hero-text h1 {
+  color: #2d2e32;
+  font-size: 5.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+  .hero-text h1 {
+    font-size: 4.5rem;
+  }
+}
+
+.hero-text p {
+  color: #555;
+  font-family: Mulish, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.hero-text button {
+  border: none;
+  color: #fff;
+  outline: none;
+  background-color: #8873ef;
+  width: fit-content;
+  padding: 1.3rem 4rem;
+  margin-top: 8rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  box-shadow: 0 5px 10px #8873ef9d;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (max-width: 900px) {
+  .hero-text {
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .hero-text button {
+    margin-top: 2rem;
+  }
+}
+
+.hero-text button span {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-left: 1rem;
+
+  -webkit-animation: bounce-horizontal 8s ease-in-out infinite;
+  animation: bounce-horizontal 8s ease-in-out infinite;
+}
+
+.hero__images {
+  visibility: visible;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transition: opacity 2.5s cubic-bezier(0.5, 0, 0, 1) 0.6s,
+    transform 2.5s cubic-bezier(0.5, 0, 0, 1) 0.6s;
+}
+
+.hero__image {
+  position: relative;
+  justify-self: center;
+  place-items: center;
+  border-radius: 125px;
+  width: 20rem;
+  height: 29rem;
+}
+
+.hero__shape {
+  background-color: #8873ef;
+  width: 23rem;
+  height: 41rem;
+  border-radius: 135px;
+  overflow: hidden;
+  outline: 20px solid #e4e1fb;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@media (max-width: 900px) {
+  .hero__shape {
+    width: 21rem;
+    height: 39rem;
+  }
+}
+
+.hero__shape img {
+  max-width: 150%;
+  height: auto;
+}
+
+.icon-container {
+  background-color: var(--icon-background-color);
+  border-radius: 1.5rem;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.021), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    transform: translateY(-1rem);
+  }
+}
+
+@keyframes reverse-bouncing {
+  0% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes bounce-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    transform: translateX(-1rem);
+  }
+}
+
+.icon--react {
+  margin-left: 2px;
+  margin-top: 0.3rem;
+  width: 35px;
+}
+
+.hero__react {
+  transform: rotate(20deg);
+  left: -4.2rem;
+  top: -2rem;
+  animation-name: bouncing;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.icon--html {
+  margin-left: 6px;
+  margin-top: 0px;
+  width: 25px;
+}
+
+.hero__html {
+  transform: rotate(20deg);
+  bottom: -11rem;
+  left: -7rem;
+  animation-name: reverse-bouncing;
+  animation-duration: 4s;
+  animation-delay: 0.3ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.icon--javascript {
+  margin-left: 4px;
+  margin-top: -5px;
+  width: 30px;
+}
+
+.hero__javascript {
+  transform: rotate(-20deg);
+  bottom: 9rem;
+  left: -8rem;
+  animation-name: bouncing;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 0.9ms;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.icon--css {
+  margin-left: 7px;
+  margin-top: 0px;
+  width: 2.6rem;
+}
+
+.hero__css {
+  transform: rotate(-20deg);
+  top: 200px;
+  right: -11rem;
+  animation-name: reverse-bouncing;
+  animation-duration: 4s;
+  animation-delay: 1ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.icon--tailwind {
+  margin-left: 2px;
+  margin-top: 0.3rem;
+  width: 35px;
+}
+
+.hero__tailwind {
+  transform: rotate(-20deg);
+  right: -6.7rem;
+  top: -3rem;
+  animation-name: bouncing;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5ms;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.icon--sass {
+  margin-left: 6px;
+  margin-top: 0px;
+  width: 30px;
+}
+
+.hero__sass {
+  transform: rotate(20deg);
+  bottom: -11rem;
+  right: -8rem;
+  animation-name: reverse-bouncing;
+  animation-duration: 4s;
+  animation-delay: 2ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@media (max-width: 900px) {
+  .hero__tailwind {
+    right: -5.7rem;
+  }
+
+  .hero__css {
+    right: -9rem;
+  }
+
+  .hero__sass {
+    right: -6rem;
+  }
+}
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
